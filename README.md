@@ -1,8 +1,8 @@
-# Hệ thống Tự động Tạo Lịch Học – Portfolio IT Business Analyst
+# Hệ thống Tự động Tạo Lịch Học 
 
 ## 1. Tổng quan dự án
 
-Đây là **dự án portfolio dành cho vị trí Business Analyst / IT Business Analyst**, mô phỏng một bài toán thực tế tại trung tâm tiếng Anh.
+Đây là dự án mô phỏng một bài toán thực tế tại trung tâm tiếng Anh.
 
 Hệ thống hiện tại đã quản lý học viên, giáo viên, khóa học, lớp học và tổng số buổi học. Tuy nhiên, khi một học viên đăng ký khóa học 32 buổi, người quản lý lớp vẫn phải tạo từng buổi học thủ công trên hệ thống. Công việc này lặp lại nhiều lần, tốn thời gian và dễ sai sót, dù lịch học theo tuần thường đã được biết trước.
 
@@ -10,22 +10,7 @@ Giải pháp đề xuất là xây dựng tính năng **tự động tạo lịc
 
 ---
 
-## 2. Vì sao dự án phù hợp với vị trí IT BA Intern / Implementation Intern?
-
-| Kỹ năng IT BA | Minh chứng trong dự án |
-|---|---|
-| Phân tích yêu cầu | BRD, SRS, phân tích stakeholder, business rules |
-| Phân tích quy trình nghiệp vụ | Quy trình hiện tại, quy trình đề xuất, business flow |
-| Đề xuất giải pháp | Decision Matrix so sánh Excel, tự động hóa trong hệ thống và thuê thêm nhân sự |
-| Viết tài liệu | BRD, SRS, User Story, Use Case, UAT Test Cases, User Guide |
-| Thiết kế giao diện sơ bộ | Wireframe cho màn hình tạo lịch và xem trước lịch |
-| Hiểu kỹ thuật cơ bản | ERD, schema database, prototype HTML/CSS/JavaScript |
-| Hỗ trợ UAT | Bộ test case UAT và acceptance criteria |
-| Làm việc với Dev/Tester | Functional rules, edge cases và test scenarios được mô tả rõ ràng |
-
----
-
-## 3. Bài toán nghiệp vụ
+## 2. Bài toán nghiệp vụ
 
 Trong quy trình hiện tại, khi học viên đăng ký một khóa học, người quản lý lớp phải tạo từng buổi học trong hệ thống.
 
@@ -47,7 +32,7 @@ Người quản lý phải nhập thủ công 32 buổi học. Việc này gây 
 
 ---
 
-## 4. Giải pháp đề xuất
+## 3. Giải pháp đề xuất
 
 Xây dựng tính năng **Tự động tạo lịch học cho khóa học**.
 
@@ -73,13 +58,12 @@ Hệ thống sẽ:
 
 ---
 
-## 5. Cấu trúc thư mục
+## 4. Cấu trúc thư mục
 
 ```text
 course-scheduling-ba/
 ├── README.md
 ├── docs/
-│   ├── 00_BA_Portfolio_Index.md
 │   ├── 01_BRD.md
 │   ├── 02_SRS.md
 │   ├── 03_User_Stories.md
@@ -91,7 +75,6 @@ course-scheduling-ba/
 │   ├── 09_UAT_Test_Cases.md
 │   ├── 10_Implementation_Plan.md
 │   ├── 11_User_Guide.md
-│   └── CV_Project_Summary.md
 ├── prototype/
 │   ├── index.html
 │   └── assets/
@@ -110,11 +93,10 @@ course-scheduling-ba/
 
 ---
 
-## 6. Tài liệu chính
+## 5. Tài liệu chính
 
 | Tài liệu | Mục đích |
 |---|---|
-| [BA Portfolio Index](docs/00_BA_Portfolio_Index.md) | Hướng dẫn nhanh cho nhà tuyển dụng/người phỏng vấn |
 | [BRD](docs/01_BRD.md) | Mục tiêu nghiệp vụ, stakeholder, phạm vi và chỉ số thành công |
 | [SRS](docs/02_SRS.md) | Yêu cầu chức năng và phi chức năng chi tiết |
 | [User Stories](docs/03_User_Stories.md) | Yêu cầu theo dạng Agile kèm acceptance criteria |
@@ -129,7 +111,7 @@ course-scheduling-ba/
 
 ---
 
-## 7. Prototype
+## 6. Prototype
 
 Prototype giao diện đơn giản nằm trong thư mục `prototype/`.
 
@@ -144,7 +126,7 @@ Prototype này dùng để minh họa logic nghiệp vụ và tư duy BA, không
 
 ---
 
-## 8. Business Rules chính
+## 7. Business Rules chính
 
 - Hệ thống sinh lịch cho đến khi đủ số buổi học yêu cầu.
 - Buổi học được sinh dựa trên ngày học trong tuần và khung giờ đã chọn.
@@ -156,31 +138,4 @@ Prototype này dùng để minh họa logic nghiệp vụ và tư duy BA, không
 
 ---
 
-## 9. Mô tả gợi ý để đưa vào CV
-
-**Hệ thống Tự động Tạo Lịch Học – Dự án Portfolio IT Business Analyst**  
-*BRD, SRS, User Story, Use Case, Business Flow, Wireframe, ERD, UAT, HTML/CSS/JavaScript prototype*
-
-- Phân tích quy trình tạo lịch học thủ công tại trung tâm tiếng Anh và xác định vấn đề nhập liệu lặp lại khi tạo nhiều buổi học cho một khóa.
-- Đề xuất tính năng tự động sinh lịch học dựa trên thời lượng khóa học, lịch học theo tuần, lịch rảnh của giáo viên và học viên.
-- Xây dựng bộ tài liệu BA gồm BRD, SRS, User Stories, Use Case Document, Business Flow, Decision Matrix, ERD, Wireframes và UAT Test Cases.
-- Thiết kế business rules cho việc bỏ qua ngày nghỉ, kiểm tra xung đột giáo viên/học viên và xem trước lịch trước khi xác nhận.
-- Xây dựng prototype giao diện đơn giản để mô phỏng logic tự động sinh lịch và hỗ trợ làm rõ yêu cầu với Dev/Tester.
-
----
-
-## 10. Pitch phỏng vấn
-
-> Em xây dựng project này để mô phỏng cách một IT Business Analyst giải quyết một vấn đề vận hành thực tế. Tại trung tâm tiếng Anh, người quản lý lớp phải tạo thủ công từng buổi học cho khóa 24 hoặc 32 buổi, dù lịch học theo tuần đã được xác định. Em đã phân tích stakeholder, xác định business requirement, so sánh các giải pháp, lựa chọn phương án xây tính năng tự động tạo lịch trong hệ thống, viết BRD/SRS/User Story/Use Case/Business Flow/ERD/Wireframe/UAT Test Cases và xây prototype để minh họa logic nghiệp vụ.
-
----
-
-## 11. Ghi chú
-
-Dự án phù hợp để ứng tuyển các vị trí:
-
-- IT Business Analyst Intern
-- Business Analyst Intern
-- Product Analyst Intern
-- Implementation Intern
-- Tester/QA Intern có định hướng BA
+## Project được thực hiện với mục đích phục vụ bài tập lớn môn học "Phân tích và thiết kế hệ thống thông tin"
