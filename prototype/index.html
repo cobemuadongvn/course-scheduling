@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototype Tự động Tạo Lịch Học</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Welcome!</p>
+        <h1>TỰ ĐỘNG TẠO LỊCH HỌC</h1>
+        <p>Tự động sinh các buổi học dựa trên lịch học theo tuần, tổng số buổi và các quy tắc kiểm tra xung đột cơ bản.</p>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Thông tin tạo lịch</h2>
+        <div class="form-grid">
+          <label>
+            Khóa học
+            <select id="course">
+              <option value="IELTS Foundation|32|120">IELTS Foundation - 32 buổi</option>
+              <option value="TOEIC Basic|24|90">TOEIC Basic - 24 buổi</option>
+              <option value="Communication Starter|16|90">Communication Starter - 16 buổi</option>
+            </select>
+          </label>
+
+          <label>
+            Học viên
+            <select id="student">
+              <option>Nguyễn Văn A</option>
+              <option>Trần Thị B</option>
+              <option>Lê Minh C</option>
+            </select>
+          </label>
+
+          <label>
+            Giáo viên
+            <select id="teacher">
+              <option>Cô An</option>
+              <option>Thầy Bình</option>
+              <option>Cô Chi</option>
+            </select>
+          </label>
+
+          <label>
+            Ngày bắt đầu
+            <input id="startDate" type="date" value="2026-06-01" />
+          </label>
+
+          <label>
+            Tổng số buổi
+            <input id="totalSessions" type="number" min="1" value="32" />
+          </label>
+
+          <label>
+            Khung giờ
+            <div class="time-row">
+              <input id="startTime" type="time" value="19:00" />
+              <span>đến</span>
+              <input id="endTime" type="time" value="21:00" />
+            </div>
+          </label>
+        </div>
+
+        <div class="weekday-box">
+          <p class="label-title">Ngày học trong tuần</p>
+          <label><input type="checkbox" name="weekday" value="1" checked /> Thứ hai</label>
+          <label><input type="checkbox" name="weekday" value="2" /> Thứ ba</label>
+          <label><input type="checkbox" name="weekday" value="3" checked /> Thứ tư</label>
+          <label><input type="checkbox" name="weekday" value="4" /> Thứ năm</label>
+          <label><input type="checkbox" name="weekday" value="5" /> Thứ sáu</label>
+          <label><input type="checkbox" name="weekday" value="6" /> Thứ bảy</label>
+          <label><input type="checkbox" name="weekday" value="0" /> Chủ nhật</label>
+        </div>
+
+        <label class="inline-check">
+          <input id="skipHolidays" type="checkbox" checked /> Bỏ qua ngày nghỉ
+        </label>
+
+        <div class="actions">
+          <button id="generateBtn">Tạo lịch học</button>
+          <button id="resetBtn" class="secondary">Làm lại</button>
+        </div>
+      </section>
+
+      <section class="card summary-card">
+        <h2>Ghi chú </h2>
+        <ul>
+          <li>Prototype này dùng để làm rõ yêu cầu, chưa phải hệ thống production.</li>
+          <li>Dữ liệu xung đột được mô phỏng để minh họa business rules khi trao đổi với Dev/Tester.</li>
+          <li>Người quản lý phải xem trước danh sách buổi học trước khi lưu.</li>
+          <li>Bỏ qua ngày nghỉ và kiểm tra xung đột là các acceptance criteria quan trọng.</li>
+        </ul>
+        <div class="metric">
+          <span>Thời gian ước tính tiết kiệm</span>
+          <strong>15 - 30 phút → 1 - 3 phút</strong>
+        </div>
+      </section>
+    </main>
+
+    <section class="card result-card">
+      <div class="result-header">
+        <div>
+          <h2>Xem trước lịch học</h2>
+          <p id="resultSummary">Bấm Tạo lịch học để xem danh sách buổi học.</p>
+        </div>
+        <button id="confirmBtn" class="success" disabled>Xác nhận và lưu</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Ngày</th>
+              <th>Thứ</th>
+              <th>Giờ học</th>
+              <th>Giáo viên</th>
+              <th>Học viên</th>
+              <th>Trạng thái</th>
+              <th>Ghi chú</th>
+            </tr>
+          </thead>
+          <tbody id="scheduleBody">
+            <tr><td colspan="8" class="empty">Chưa có buổi học nào được tạo.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

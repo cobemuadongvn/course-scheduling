@@ -1,0 +1,4 @@
+teacher_id,full_name,phone,email,status
+1,Cô An,0911000001,an.teacher@example.com,đang hoạt động
+2,Thầy Bình,0911000002,binh.teacher@example.com,đang hoạt động
+3,Cô Chi,0911000003,chi.teacher@example.com,đang hoạt động

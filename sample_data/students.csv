@@ -1,0 +1,4 @@
+student_id,full_name,phone,email,status
+1,Nguyễn Văn A,0901000001,nguyenvana@example.com,đang hoạt động
+2,Trần Thị B,0901000002,tranthib@example.com,đang hoạt động
+3,Lê Minh C,0901000003,leminhc@example.com,đang hoạt động
